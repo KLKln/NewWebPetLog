@@ -29,7 +29,9 @@ public class PetHelper {
 	public void removePet(Pet toRemove) {
 		EntityManager em = emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<Pet> typedQuery = em.createQuery("select p from Pet p where p.petName = :selectedName and p.petType = :selectedType and p.petOwner = :selectedOwner", Pet.class);
+		//TypedQuery<Pet> typedQuery = em.createQuery("select p from Pet p where p.petName = :selectedName and p.petType = :selectedType and p.petOwner = :selectedOwner", Pet.class);
+		TypedQuery<Pet> typedQuery = em.createQuery("select p from Pet p where p.name = :selectedName and p.type = :selectedType and p.owner = :selectedOwner", Pet.class);
+
 		
 		typedQuery.setParameter("selectedName", toRemove.getName());
 		typedQuery.setParameter("selectedType", toRemove.getType());
