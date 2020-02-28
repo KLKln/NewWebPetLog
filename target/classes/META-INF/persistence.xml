@@ -4,6 +4,7 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>model.Pet</class>
 		<class>model.Owner</class>
+		<class>model.PetList</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://petlog.cn6mwhq0d6vb.us-east-2.rds.amazonaws.com/petlog"/>

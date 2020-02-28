@@ -62,6 +62,15 @@ public class Pet {
 		this.type = type;
 		this.owner = owner;
 	}
+	
+	public Pet(String name, String type) {
+		this.name = name;
+		this.type= type;
+	}
+	
+	public Pet(String owner) {
+		this.owner = owner;
+	}
 
 	
 	public String returnPetDetails() {
